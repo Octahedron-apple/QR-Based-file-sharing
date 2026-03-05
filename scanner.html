@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanner</title>
+    <link rel="stylesheet" href="scanner.css">
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <img src="logo.png" alt="logo">
+        <p class="name">String-Sender</p>
+    </div>
+    <button class="home-btn" onclick="window.location.href='index.html'">Back to Home</button>
+</header>
+    <main>
+        <div class="mainContent">
+            <div class="scan">
+                <div class="mode-selection">
+                    <label>
+                        <input type="radio" name="scanMode" value="text" checked>
+                        <span>Text Mode</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="scanMode" value="file">
+                        <span>File Mode</span>
+                    </label>
+                </div>
+
+                <button class="scanner" id="startScan">Start Scan</button>
+                
+                <p id="status-text">Ready</p>
+                <div id="qr-reader"></div>
+                
+                <div id="result-container">
+                    <p id="result"></p>
+                    <div id="file-download-area" style="display:none; margin-top:10px;"></div>
+                </div>
+            </div>
+
+            <div class="instruction">
+                <p> Instructions </p>
+                <ol>
+                    <li>Select <strong>Text Mode</strong> for simple strings.</li>
+                    <li>Select <strong>File Mode</strong> to receive a file.</li>
+                    <li id="file-instruction" style="display:none; color: #2b6cb0;">
+                        <strong>For Files:</strong> Scan the <em>Filename</em> QR first, then scan the <em>Content</em> QR.
+                    </li>
+                    <li>Ensure adequate lighting.</li>
+                </ol>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="scanner.js"></script>
+</body>
+</html>

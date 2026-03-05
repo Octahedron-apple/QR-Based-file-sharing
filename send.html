@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String-Sender with QR</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="send.css" />
+  </head>
+  <body>
+    <div class="heading">
+      <div class="header-content">
+        <div class="logo-box">
+          <img src="logo.png" alt="logo" />
+        </div>
+        <h1 id="heading">String-Sender</h1>
+        <button
+          class="home-btn-alt"
+          onclick="window.location.href = 'homePage.html'"
+        >
+          Home
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="how_to_send">
+        <h2 id="head3">How to send the file :</h2>
+        <ul class="list">
+          <li>
+            Click on the "Choose File" button to select the file you want to
+            send.
+          </li>
+          <li>
+            After selecting the file, click on the "Send File" button to
+            initiate the sending process.
+          </li>
+          <li>
+            Wait for a confirmation message indicating that the file has been
+            sent successfully.
+          </li>
+        </ul>
+      </div>
+      <div class="send_content">
+        <h1 id="heading2">Send Content</h1>
+        <div id="btns">
+          <button class="buttons file">Send File</button>
+          <button class="buttons text">Send Text</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="file_input_area" class="hidden">
+      <input type="file" id="fileChooser" />
+      <button id="generateFileQR" class="btn2 generate-btn">
+        Generate File QR
+      </button>
+    </div>
+
+    <div id="text_input_area" class="hidden">
+      <textarea id="textInput" placeholder="Enter your text here..."></textarea>
+      <button id="generateTextQR" class="btn2 generate-btn">
+        Generate Text QR
+      </button>
+    </div>
+
+    <div class="info">
+      <button class="btn2">About</button>
+      <button class="btn2">Contact Us</button>
+    </div>
+    <div id="qr-code-container"></div>
+
+    <script src="send.js"></script>
+  </body>
+</html>

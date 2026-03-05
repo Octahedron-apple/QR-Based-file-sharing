@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MainPage</title>
+    <link rel="stylesheet" href="homePage.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+    </style>
+    <link rel="manifest" href="manifest.json">
+  </head>
+  <body>
+    <header>
+      <img src="" alt="logo" />
+      <h1 class="webName">Website Name</h1>
+    </header>
+    <main>
+      <div class="share">
+        <button
+          class="shareBtn"
+          id="share_1"
+          onclick="window.location.href = 'send.html'"
+        >
+          SEND FILE
+        </button>
+        <button
+          class="shareBtn"
+          id="share_2"
+          onclick="window.location.href = 'scanner.html'"
+        >
+          RECIEVE FILE
+        </button>
+      </div>
+
+      <div class="instruction">
+        <div class="steps" id="instruct_1">
+          <p class="stepHeading">Instructions for sending files</p>
+          <ul>
+            <li>Click the "SEND FILE" button to open the send page.</li>
+            <li>
+              Choose a file using the file chooser or paste text into the input
+              area.
+            </li>
+            <li>
+              Click the "Generate" / "Create" button to produce a QR code or a
+              share link, then have the receiver scan it.
+            </li>
+          </ul>
+        </div>
+
+        <div class="steps" id="instruct_2">
+          <p class="stepHeading">Instructions for receiving files</p>
+          <ul>
+            <li>Click the "RECEIVE FILE" button to open the scanner page.</li>
+            <li>
+              Use your device camera to scan the sender's QR code or open the
+              shared link.
+            </li>
+            <li>
+              Follow the on-screen prompts to download and save the received
+              file.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footers">
+        <ul>
+          <li><button class="info">About Us</button></li>
+          <li><button class="info">Contact for Help</button></li>
+        </ul>
+      </div>
+    </footer>
+    <script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js')
+    .then(() => console.log("Service Worker Registered"));
+}
+</script>
+  </body>
+</html>
