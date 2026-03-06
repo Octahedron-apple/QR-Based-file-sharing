@@ -309,7 +309,7 @@ footer {
 
 /* Info section (footer-like) ------------------------------------------- */
 .info {
-  position: fixed;
+  position: relative;
   left: 0;
   right: 0;
   bottom: 0;
